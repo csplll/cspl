@@ -3,26 +3,11 @@
 //陈仕鹏
 #include <stdio.h>
 int main(){
-    int a;
-    int b;
-    char c;
-    int x;
-    scanf("%d %d %c",&a,&b,&c);
-    if(c=='+'){
-        x=a+b;
-    }else if(c=='-'){
-        x=a-b;
-    }else if(c=='*'){
-        x=a*b;
-    }else if(c=='/'){
-        if(b==0){
-            printf("除数不能为零，请重新输入");
-            return 1;
-        }
-        x=a/b;
-    }else{
-        printf("请输入有效运算符");
-        return 1;
-    }printf("%d",x);
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    if(a+b>c&&a+c>b&&b+c>a){
+        printf("可以组成三角形");
+    }else
+        printf("不能组成三角形");
     return 0;
 }
