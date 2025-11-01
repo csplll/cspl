@@ -4,13 +4,13 @@
 #include<stdio.h>
 int main(){
     int arr[5];
-    int i,num;
+    scanf("%d %d %d %d",&arr[0],&arr[1],&arr[2],&arr[3]);
+    arr[4]=arr[3];
+    arr[3]=arr[2];
+    arr[2]=arr[1];
+    arr[1]=arr[0];
+    arr[0]=0;
     for(int i=0;i<5;i++){
-        do{
-            scanf("%d",&num);
-        }while(num%2!=0);
-        arr[i]=num;
-    }for(int i=0;i<5;i++){
         printf("%d",arr[i]);
         if(i<4){
             printf(" ");
